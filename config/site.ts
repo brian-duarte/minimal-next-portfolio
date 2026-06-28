@@ -4,18 +4,15 @@ export const siteConfig = {
   username: "Brian_Duarte",
   description:
     "Brian Duarte - Ensuring software quality with presision",
-  url: "https://nbarkiya.xyz",
+  url: "https://brian-duarte-portfolio.vercel.app/",
   links: {
     github: "https://github.com/brian-duarte",
     linkedin: "https://www.linkedin.com/in/brian-duarte-qa-engineer/",
-    templateRepo: "https://github.com/namanbarkiya/minimal-next-portfolio"
+    templateRepo: "https://brian-duarte-portfolio.vercel.app/"
   },
-  ogImage:
-    "https://res.cloudinary.com/dvt5vkfwz/image/upload/v1767384721/naman_portfolio_og_image.png",
-  iconIco:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
-  logoIcon:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
+  ogImage: "/mi-foto.jpeg",
+  iconIco: "/logo.png",
+  logoIcon: "/logo.png",
   keywords: [
   "Brian Duarte",
   "QA Engineer",
