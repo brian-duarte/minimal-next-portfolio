@@ -22,7 +22,7 @@ import { featuredSkills } from "@/config/skills";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/mi-foto.jpeg";
-import AboutMe from "@/components/about-me"; // Importación correcta de tu nueva sección
+// import AboutMe from "@/components/about-me"; // Importación correcta de tu nueva sección
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function IndexPage() {
   const featuredBlogs = getFeaturedBlogs();
-  
+
   // Structured data for personal portfolio
   const personSchema = {
     "@context": "https://schema.org",
@@ -185,10 +185,11 @@ export default function IndexPage() {
         </div>
       </section>
 
-      {/* --- 🚀 AQUÍ INTEGRAMOS TU NUEVA SECCIÓN SOBRE MÍ (STORYTELLING) --- */}
-      <AnimatedSection direction="up" className="w-full">
-        <AboutMe />
-      </AnimatedSection>
+      {/* --- SECCIÓN SOBRE MÍ (DESACTIVADA TEMPORALMENTE) ---
+<AnimatedSection direction="up" className="w-full">
+  <AboutMe />
+</AnimatedSection>
+*/}
 
       {/* --- SECCIÓN DE PROYECTOS --- */}
       <AnimatedSection

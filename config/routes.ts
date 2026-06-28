@@ -1,9 +1,9 @@
 export const routesConfig: any = {
   mainNav: [
-    {
-      title: "About Me",
-      href: "/#about", // Apunta al id="about" que le pusimos a tu sección
-    },
+   // {
+   //   title: "About Me",
+   //   href: "/#about", // Apunta al id="about" que le pusimos a tu sección
+   // },
     {
       title: "Projects",
       href: "/projects",

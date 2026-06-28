@@ -12,7 +12,6 @@ type GitHubStarBadgeProps = {
 };
 
 export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
-  return null;
   const [stars, setStars] = React.useState<number | null>(null);
 
   React.useEffect(() => {

@@ -57,10 +57,10 @@ export const pagesConfig: PagesConfig = {
   },
   resume: {
     title: "Resume",
-    description: "Naman Barkiya's resume.",
+    description: "Brian Duarte resume.",
     metadata: {
       title: "Resume",
-      description: "Naman Barkiya's resume.",
+      description: "Brian Duarte resume.",
     },
   },
   blogs: {
@@ -79,7 +79,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Experience",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Brian Duarte professional journey and experience timeline.",
     },
   },
 };
