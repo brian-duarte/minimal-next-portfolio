@@ -21,8 +21,8 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
                 <p className="text-sm text-muted-foreground">
                   {skill.description}
                 </p>
-                {/* Si quieres ocultar las estrellas por completo, deja esta línea comentada. Si las quieres volver a ver, descoméntala */}
-                {/* <Rating stars={skill.rating} /> */}
+                {/* Volvemos a renderizar el componente Rating con sus estrellas */}
+                <Rating stars={skill.rating} />
               </div>
             </div>
           </div>

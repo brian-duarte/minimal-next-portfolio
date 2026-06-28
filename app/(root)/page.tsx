@@ -22,11 +22,11 @@ import { featuredSkills } from "@/config/skills";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/mi-foto.jpeg";
+import AboutMe from "@/components/about-me"; // Importación correcta de tu nueva sección
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
-  description:
-    "Brian Duarte - Ensuring software quality with precision.",
+  description: "Brian Duarte - Ensuring software quality with precision.",
   alternates: {
     canonical: siteConfig.url,
   },
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
 
 export default function IndexPage() {
   const featuredBlogs = getFeaturedBlogs();
+  
   // Structured data for personal portfolio
   const personSchema = {
     "@context": "https://schema.org",
@@ -77,6 +78,7 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
+      {/* --- SECCIÓN HERO (PRESENTACIÓN) --- */}
       <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
           <Image
@@ -119,13 +121,13 @@ export default function IndexPage() {
                 <Icons.post className="w-4 h-4 mr-2" /> Resume
               </Link>
             </AnimatedText>
-            
+
             <AnimatedText delay={0.8}>
               <Link
                 href="/contact"
                 className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
               >
-                <Icons.gmail className="h-4 w-4 mr-2" /> 
+                <Icons.gmail className="h-4 w-4 mr-2" />
                 Contact
               </Link>
             </AnimatedText>
@@ -158,7 +160,7 @@ export default function IndexPage() {
                 <Icons.linkedin className="w-4 h-4 mr-2" /> LinkedIn
               </Link>
             </AnimatedText>
-            
+
             <AnimatedText delay={1.2}>
               <Link
                 href={"https://github.com/brian-duarte"}
@@ -176,14 +178,19 @@ export default function IndexPage() {
               </Link>
             </AnimatedText>
           </div>
-          
+
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
         </div>
       </section>
 
-      {/* SECCIÓN DE PROYECTOS */}
+      {/* --- 🚀 AQUÍ INTEGRAMOS TU NUEVA SECCIÓN SOBRE MÍ (STORYTELLING) --- */}
+      <AnimatedSection direction="up" className="w-full">
+        <AboutMe />
+      </AnimatedSection>
+
+      {/* --- SECCIÓN DE PROYECTOS --- */}
       <AnimatedSection
         direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
@@ -227,7 +234,7 @@ export default function IndexPage() {
         </AnimatedText>
       </AnimatedSection>
 
-      {/* SECCIÓN DE EXPERIENCIA */}
+      {/* --- SECCIÓN DE EXPERIENCIA --- */}
       <AnimatedSection
         direction="up"
         className="container space-y-6 py-10 my-14"
@@ -268,82 +275,7 @@ export default function IndexPage() {
         </AnimatedText>
       </AnimatedSection>
 
-      {/* 🛌 SECCIÓN DE CONTRIBUCIONES OCULTADA CON ÉXITO
-      <AnimatedSection
-        direction="up"
-        className="container space-y-6 bg-muted py-10 my-14"
-        id="contributions"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <AnimatedText
-            as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
-          >
-            {pagesConfig.contributions.title}
-          </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.contributions.description}
-          </AnimatedText>
-        </div>
-        <ContributionCard contributions={featuredContributions} />
-        <AnimatedText delay={0.4} className="flex justify-center">
-          <Link href="/contributions">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
-            </Button>
-          </Link>
-        </AnimatedText>
-      </AnimatedSection>
-      */}
-
-      {/* 🛌 SECCIÓN DE BLOGS OCULTADA CON ÉXITO
-      <AnimatedSection
-        direction="up"
-        className="container space-y-6 py-10 my-14"
-        id="blogs"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <AnimatedText
-            as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
-          >
-            {pagesConfig.blogs.title}
-          </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.blogs.description}
-          </AnimatedText>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full items-stretch">
-          {featuredBlogs.map((blog, index) => (
-            <AnimatedSection
-              key={blog.slug}
-              delay={0.1 * (index + 1)}
-              direction="up"
-              className="h-full w-full min-w-0"
-            >
-              <BlogCard blog={blog} />
-            </AnimatedSection>
-          ))}
-        </div>
-        <AnimatedText delay={0.4} className="flex justify-center">
-          <Link href="/blogs">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
-            </Button>
-          </Link>
-        </AnimatedText>
-      </AnimatedSection>
-      */}
-
-      {/* SECCIÓN DE SKILLS */}
+      {/* --- SECCIÓN DE SKILLS --- */}
       <AnimatedSection
         direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
